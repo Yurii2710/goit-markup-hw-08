@@ -526,6 +526,12 @@ img {
   padding-bottom: 94px;
 }
 
+@media screen and (max-width: 767px) {
+  .activity {
+    display: none;
+  }
+}
+
 .activity__title {
   margin-bottom: 50px;
   font-family: Roboto;
