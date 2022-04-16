@@ -6,17 +6,28 @@
     @media screen and (min-width: 768px) {
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 }
 
 .header-nav {
     display: flex;
     align-items: center;
+
+    @media screen and (max-width: 767px) {
+        justify-content: space-between;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
 }
 
 .header-nav__list {
-    display: flex;
-    flex-wrap: wrap;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 .header-nav__item {
@@ -27,7 +38,13 @@
     }
 
     &:nth-child(1) {
-        margin-left: 93px;
+        margin-left: 88px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        &:nth-child(1) {
+            margin-left: 93px;
+        }
     }
 }
     
@@ -70,26 +87,35 @@
 }
 
 .header-contact {
-    display: flex;
-    margin-left: auto;
+    
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        margin-left: auto;
+    }
 }
 
 .header-contact__item:not(:last-child) {
-    margin-right: 30px;
+    margin-bottom: 10px;
+    
+    @media screen and (min-width: 1200px) {
+        margin-right: 30px;
+    }
 }
 
 .header-contact__link {
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
 
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: 1.16;
     letter-spacing: 0.02em;
     color: $text-color;
 
@@ -97,6 +123,16 @@
 
     &:hover, &:focus {
         color: #2196f3;
+    }
+
+    
+
+    @media screen and (min-width: 1200px) {
+        justify-content: center;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        font-size: 14px;
+        line-height: 1.14;
     }
 }
 
@@ -127,4 +163,22 @@
     height: 5px;
     background: #2196f3;
     border-radius: 2px;
+}
+
+// modal button
+
+.header-burger {
+    min-width: 40px;
+    min-height: 40px;
+    background: $white-color;
+    border: opacity($color: hsla(0, 0%, 100%, 0));
+    box-sizing: border-box;
+
+    &:hover, &:focus {
+        fill: $blu-color;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
 }

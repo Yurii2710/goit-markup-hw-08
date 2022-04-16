@@ -12,12 +12,11 @@
     @media screen and (min-width: 768px) {
         display: flex;
         flex-wrap: wrap;
-        margin-left: -30px;
+        margin-left: -15px;
     }
 }
 
 .about-advantage__item {
-    
     &:not(:last-child) {
         @media screen and (max-width: 767px) {
             margin-bottom: 30px;
@@ -25,6 +24,13 @@
     }
 
     @media screen and (min-width: 768px) {
+        width: calc((100% - 2 * 30px) / 2);
+        margin: 15px;
+    }
+
+
+    @media screen and (min-width: 1200px) {
+        margin: 0;
         max-width: 270px;
         width: calc(100% / 4 - 30px);
         margin-left: 30px;
@@ -39,11 +45,6 @@
     background-color: #fcf8fc;
     border-radius: 4px;
     display: flex;
-
-
-    @media screen and (min-width: 780px) {
-        width: 270px;
-    }
 }
 
 .about-advantage__title {

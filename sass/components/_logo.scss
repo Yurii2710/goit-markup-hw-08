@@ -1,4 +1,4 @@
-.logo {
+.logo-header {
     display: inline-block;
     font-family: Raleway;
     font-style: normal;
@@ -7,6 +7,32 @@
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: #2196f3;
+
+    @media screen and (max-width: 1199px) {
+        font-size: 24px;
+        line-height: 1.16;
+    }
+}
+
+.logo-footer {
+    display: inline-block;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: #2196f3;
+
+    @media screen and (max-width: 1199px) {
+        font-size: 24px;
+        line-height: 1.16;
+    }
+
+    @media screen and (max-width: 767px) {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .logo__component-header {
@@ -17,5 +43,9 @@
 
 .logo__component-footer {
     color: $white-color;
-    margin-right: 93px;
+
+    @media screen and (min-width: 1200px) {
+        margin-right: 93px;
+    }
+    
 }
