@@ -29,16 +29,13 @@
 
 .clients-cards {
     display: flex;
-    flex-wrap: wrap;
+    
     margin: -15px;
     justify-content: center;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1199px) {
         margin-left: -15px;
-    }
-
-    @media screen and (min-width: 768px) {
-        margin-left: -15px;
+        flex-wrap: wrap;
     }
 
     @media screen and (min-width: 1200px) {
@@ -55,7 +52,7 @@
 
     @media screen and (min-width: 768px) {
         width: calc((100% - 6 * 15px) / 3);
-        margin: 15px;
+        margin: 30px;
     }
 }
 

@@ -100,11 +100,6 @@ img {
   .logo-footer {
     font-size: 24px;
     line-height: 1.16;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .logo-footer {
     display: flex;
     justify-content: center;
   }
@@ -1082,20 +1077,14 @@ img {
 
 .clients-cards {
   display: flex;
-  flex-wrap: wrap;
   margin: -15px;
   justify-content: center;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .clients-cards {
     margin-left: -15px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .clients-cards {
-    margin-left: -15px;
+    flex-wrap: wrap;
   }
 }
 
@@ -1116,7 +1105,7 @@ img {
 @media screen and (min-width: 768px) {
   .clients-cards__item {
     width: calc((100% - 6 * 15px) / 3);
-    margin: 15px;
+    margin: 30px;
   }
 }
 
@@ -1167,7 +1156,14 @@ img {
 }
 
 /* - - footer-contact - - */
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
+  .footer__contact-social {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 1199px) {
   .footer-contact {
     margin-bottom: 60px;
   }
@@ -1183,7 +1179,7 @@ img {
   display: inline-block;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .footer-contact__address {
     text-align: center;
     width: 100%;
@@ -1334,6 +1330,9 @@ img {
 @media screen and (max-width: 1199px) {
   .footer-form__input {
     margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
