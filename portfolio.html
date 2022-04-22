@@ -25,8 +25,19 @@
     <header class="header">
         <div class="container header-container">
             <nav class="header-nav">
-                <a class="link logo" href="./index.html">Web<span class="logo__component-header">Studio</span></a>
+                <a class="link logo-header" href="./index.html">Web<span class="logo__component-header">Studio</span></a>
                 
+                <!-- MOBILE MODAL-BUTTON -->
+                <button type="button" class="header-burger" data-modal-mobile-open>
+                    <svg
+                        width="40" 
+                        height="40">
+                            <use 
+                                href="./img./icons.svg#icon-burger-mobile">
+                            </use>
+                    </svg>
+                </button>
+
                 <ul class="list header-nav__list">
                     <li class="header-nav__item">
                         <a class="link header-nav__link" href="./index.html">Студия</a>
@@ -70,6 +81,51 @@
                 </li>
             </ul>
         </div>
+
+        <!-- MOBILE MODAL -->
+        <div class="backdrop-header is-hidden" data-modal-mobile>
+            <div class="modal-header">
+                <button type="button" class="modal-button-header" data-modal-mobile-close>
+                    <svg 
+                    width="19" 
+                    height="19">
+                        <use 
+                            href="./img./icons.svg#icon-vector">
+                        </use>
+                    </svg>
+                </button>
+
+                <nav class="header-nav__modal">
+                    <ul class="list header-nav__list--modal">
+                        <li class="header-nav__item--modal">
+                            <a class="link header-nav__link--modal" href="./index.html">Студия</a>
+                        </li>
+                        <li class="header-nav__item--modal">
+                            <a class="link header-nav__link--modal header-nav__link--portfolio" href="./portfolio.html">Портфолио</a>
+                        </li>
+                        <li class="header-nav__item--modal">
+                            <a class="link header-nav__link--modal " href="">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+    
+                <ul class="list header-contact__modal">
+                    <li class="header-contact__item--modal"> 
+                        <a class="link header-contact__link-modal header-contact__link-modal--tel" href="tel:+380961111111"> +38 096 111 11 11</a>
+                    </li>
+                    <li class="header-contact__item--modal">
+                        <a class="link header-contact__link-modal header-contact__link-modal--mail" href="mailto:info@devstudio.com"> info@devstudio.com</a>
+                    </li>
+                </ul>
+
+                <ul class="list header-sosial">
+                    <li class="header-sosial__item" lang="en">Instagram</li>
+                    <li class="header-sosial__item" lang="en">Twitter</li>
+                    <li class="header-sosial__item" lang="en">Facebook</li>
+                    <li class="header-sosial__item" lang="en">LinkedIn</li>
+                </ul>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -96,7 +152,7 @@
             
             <div class="container">
                 <ul class="list projects">
-                    <li class="">
+                    <li class="projects__item">
                         <a href="" class="projects__link link"> 
                             <div class="projects__img">
                                 <img src="./img./portfolio-img/img-1.jpg" alt="изображение сайта"
@@ -116,7 +172,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="">
+                    <li class="projects__item">
                         <a href="" class="projects__link link"> 
                             <div class="projects__img">
                                 <img src="./img./portfolio-img/img-2.jpg" alt="изображение баскетбольной команды"
@@ -136,7 +192,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="">
+                    <li class="projects__item">
                         <a href="" class="projects__link link"> 
                             <div class="projects__img">
                                 <img src="./img./portfolio-img/img-3.jpg" alt="изображение эмблемы ресторана'"
@@ -156,7 +212,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="">
+                    <li class="projects__item">
                         <a href="" class="projects__link link"> 
                             <div class="projects__img">
                                 <img src="./img./portfolio-img/img-4.jpg" alt="изображение наушников"
@@ -176,7 +232,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="">
+                    <li class="projects__item">
                         <a href="" class="projects__link link"> 
                             <div class="projects__img">
                                 <img src="./img./portfolio-img/img-5.jpg" alt="изображение коробок"
@@ -196,7 +252,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="">
+                    <li class="projects__item">
                         <a href="" class="projects__link link"> 
                             <div class="projects__img">
                                 <img src="./img./portfolio-img/img-6.jpg" alt="изображение веб-сайта"
@@ -216,7 +272,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="">
+                    <li class="projects__item">
                         <a href="" class="projects__link link"> 
                             <div class="projects__img">
                                 <img src="./img./portfolio-img/img-7.jpg" alt="изображение журнала"
@@ -236,7 +292,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="">
+                    <li class="projects__item">
                         <a href="" class="projects__link link"> 
                             <div class="projects__img">
                                 <img src="./img./portfolio-img/img-8.jpg" alt="изображение эмблемы"
@@ -256,7 +312,7 @@
                             </div>
                         </a>
                     </li>
-                    <li class="">
+                    <li class="projects__item">
                         <a href="" class="projects__link link"> 
                             <div class="projects__img">
                                 <img src="./img./portfolio-img/img-9.jpg" alt="изображение веб-сайта"
@@ -281,79 +337,80 @@
         </section>
     </main>
 
-    <footer class="footer">
+<footer class="footer">
         <div class="container footer-container">
+            <div class="footer__contact-social">
+                <div class="footer-contact">
+                    <a class="link logo-footer" href="">Web<span class="logo__component-footer">Studio</span></a>
+                    <address>
+                        <ul class="list footer-contact__address">
+                            <li class="footer-contact__item">
+                                <a class="link footer-contact__link" href="https://goo.gl/maps/dG1WspT11dGawZWf6" target="_blank" rel="noopener noreferrer">г. Киев, пр-т Леси Украинки, 26</a></li>
+                            <li class="footer-contact__item">
+                                <a class="link footer-contact__link footer-contact__link--other" href="mailto:info@example.com">info@example.com</a></li>
+                            <li class="footer-contact__item">
+                                <a class="link footer-contact__link footer-contact__link--other" href="tel:+380991111111">+38 099 111 11 11</a></li>
+                        </ul>
+                    </address>
+                </div>
 
-            <div class="footer-contact">
-                <a class="link logo" href="">Web<span class="logo__component-footer">Studio</span></a>
-                <address>
-                    <ul class="list footer-contact__address">
-                        <li class="footer-contact__item">
-                            <a class="link footer-contact__link" href="https://goo.gl/maps/dG1WspT11dGawZWf6" target="_blank" rel="noopener noreferrer">г. Киев, пр-т Леси Украинки, 26</a></li>
-                        <li class="footer-contact__item">
-                            <a class="link footer-contact__link footer-contact__link--other" href="mailto:info@example.com">info@example.com</a></li>
-                        <li class="footer-contact__item">
-                            <a class="link footer-contact__link footer-contact__link--other" href="tel:+380991111111">+38 099 111 11 11</a></li>
+                <div class="footer-social">
+                    <h4 class="footer-social__title">ПРИСОЕДИНЯЙТЕСЬ</h4>
+                    <ul class="footer-social__list list">
+                        <li class="footer-social__item">
+                            <a href="" class="footer-social__link" target="_blank">
+                                <svg 
+                                    class="footer-social__icons" 
+                                    width="20" 
+                                    height="20"
+                                >
+                                    <use 
+                                        href="./img./icons.svg#icon-instagram"
+                                    ></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer-social__item">
+                            <a href="" class="footer-social__link" target="_blank">
+                                <svg 
+                                    class="footer-social__icons" 
+                                    width="20" 
+                                    height="20"
+                                >
+                                    <use 
+                                        href="./img./icons.svg#icon-twitter"
+                                    ></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer-social__item">
+                            <a href="" class="footer-social__link" target="_blank">
+                                <svg 
+                                    class="footer-social__icons" 
+                                    width="20" 
+                                    height="20"
+                                >
+                                    <use 
+                                        href="./img./icons.svg#icon-facebook"
+                                    ></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer-social__item">
+                            <a href="" class="footer-social__link" target="_blank">
+                                <svg 
+                                    class="footer-social__icons" 
+                                    width="20" 
+                                    height="20"
+                                >
+                                    <use 
+                                        href="./img./icons.svg#icon-linkedin"
+                                    ></use>
+                                </svg>
+                            </a>
+                        </li>
                     </ul>
-                </address>
-            </div>
-
-            <div class="footer-social">
-                <h4 class="footer-social__title">ПРИСОЕДИНЯЙТЕСЬ</h4>
-                <ul class="footer-social__list list">
-                    <li class="footer-social__item">
-                        <a href="" class="footer-social__link" target="_blank">
-                            <svg 
-                                class="footer-social__icons" 
-                                width="20" 
-                                height="20"
-                            >
-                                <use 
-                                    href="./img./icons.svg#icon-instagram"
-                                ></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="footer-social__item">
-                        <a href="" class="footer-social__link" target="_blank">
-                            <svg 
-                                class="footer-social__icons" 
-                                width="20" 
-                                height="20"
-                            >
-                                <use 
-                                    href="./img./icons.svg#icon-twitter"
-                                ></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="footer-social__item">
-                        <a href="" class="footer-social__link" target="_blank">
-                            <svg 
-                                class="footer-social__icons" 
-                                width="20" 
-                                height="20"
-                            >
-                                <use 
-                                    href="./img./icons.svg#icon-facebook"
-                                ></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="footer-social__item">
-                        <a href="" class="footer-social__link" target="_blank">
-                            <svg 
-                                class="footer-social__icons" 
-                                width="20" 
-                                height="20"
-                            >
-                                <use 
-                                    href="./img./icons.svg#icon-linkedin"
-                                ></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
+                </div>
             </div>
 
             <div class="footer-form">
