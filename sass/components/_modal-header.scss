@@ -1,48 +1,39 @@
-// backdrop
-
-.backdrop-header {
-    position: fixed;
-    z-index: 100;
+.mobile-menu {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+    height: 100vh;
+    overflow: auto;
+    background-color: #fff;
 
-    overflow-y: scroll;
-}
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 
-.backdrop-header {
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop-header.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
+.mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    z-index: 1000;
 }
 
-.modal-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 100%;
-    padding: 40px;
-
-    background-color: #fff;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
+.mobile-menu__container {
+    position: relative;
+    padding-top: 48px;
+    padding-bottom: 48px;
 }
 
 // button 
 
-.modal-button-header {
+.mobile-button-header {
     position: absolute;
-    top: 21px;
-    right: 25px;
+    top: 10px;
+    right: 15px;
     min-width: 40px;
     min-height: 40px;
 
@@ -58,9 +49,8 @@
 
 // list-nav
 
-.header-nav__modal {
-    margin-top: 8px;
-    margin-bottom: 302px;
+.header-nav__list--modal {
+    margin-bottom: 308px;
 }
 
 .header-nav__item--modal {
@@ -85,7 +75,11 @@
     }
 }
 
-.header-nav__link--modal-studio {
+.header-nav__link--mobile-studio {
+    color: $blu-color;
+}
+
+.header-nav__link--mobile-portfolio {
     color: $blu-color;
 }
 

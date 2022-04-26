@@ -26,18 +26,6 @@
         <div class="container header-container">
             <nav class="header-nav">
                 <a class="link logo-header" href="./index.html">Web<span class="logo__component-header">Studio</span></a>
-                
-                <!-- MOBILE MODAL-BUTTON -->
-                <button type="button" class="header-burger" data-modal-mobile-open>
-                    <svg
-                        width="40" 
-                        height="40">
-                            <use 
-                                href="./img./icons.svg#icon-burger-mobile">
-                            </use>
-                    </svg>
-                </button>
-
                 <ul class="list header-nav__list">
                     <li class="header-nav__item">
                         <a class="link header-nav__link header-nav__link--studio" href="./index.html">Студия</a>
@@ -50,6 +38,17 @@
                     </li>
                 </ul>
             </nav>
+
+            <!-- MOBILE MODAL-BUTTON -->
+            <button type="button" class="header-burger" data-menu-open>
+                <svg
+                    width="40" 
+                    height="40">
+                        <use 
+                            href="./img./icons.svg#icon-burger-mobile">
+                        </use>
+                </svg>
+            </button>
 
             <ul class="list header-contact">
                 <li class="header-contact__item">
@@ -83,10 +82,10 @@
         </div>
 
         
-        <!-- MOBILE MODAL -->
-        <div class="backdrop-header is-hidden" data-modal-mobile>
-            <div class="modal-header">
-                <button type="button" class="modal-button-header" data-modal-mobile-close>
+        <!-- MOBILE MENU -->
+        <div class="mobile-menu" data-menu>
+            <div class="container mobile-menu__container">
+                <button type="button" class="mobile-button-header" data-menu-close>
                     <svg 
                     width="19" 
                     height="19">
@@ -95,21 +94,19 @@
                         </use>
                     </svg>
                 </button>
-
-                <nav class="header-nav__modal">
-                    <ul class="list header-nav__list--modal">
-                        <li class="header-nav__item--modal">
-                            <a class="link header-nav__link--modal header-nav__link--modal-studio" href="./index.html">Студия</a>
-                        </li>
-                        <li class="header-nav__item--modal">
-                            <a class="link header-nav__link--modal " href="./portfolio.html">Портфолио</a>
-                        </li>
-                        <li class="header-nav__item--modal">
-                            <a class="link header-nav__link--modal " href="">Контакты</a>
-                        </li>
-                    </ul>
-                </nav>
-    
+                
+                <ul class="list header-nav__list--modal">
+                    <li class="header-nav__item--modal">
+                        <a class="link header-nav__link--modal header-nav__link--mobile-studio" href="./index.html">Студия</a>
+                    </li>
+                    <li class="header-nav__item--modal">
+                        <a class="link header-nav__link--modal " href="./portfolio.html">Портфолио</a>
+                    </li>
+                    <li class="header-nav__item--modal">
+                        <a class="link header-nav__link--modal " href="">Контакты</a>
+                    </li>
+                </ul>
+                
                 <ul class="list header-contact__modal">
                     <li class="header-contact__item--modal"> 
                         <a class="link header-contact__link-modal header-contact__link-modal--tel" href="tel:+380961111111"> +38 096 111 11 11</a>
@@ -118,7 +115,7 @@
                         <a class="link header-contact__link-modal header-contact__link-modal--mail" href="mailto:info@devstudio.com"> info@devstudio.com</a>
                     </li>
                 </ul>
-
+                
                 <ul class="list header-sosial">
                     <li class="header-sosial__item" lang="en">Instagram</li>
                     <li class="header-sosial__item" lang="en">Twitter</li>
@@ -205,7 +202,10 @@
                 <h2 class="activity__title">Чем мы занимаемся</h2>
                 <ul class="list activity__list">
                     <li class="activity__item">
-                        <img src="./img./img-1.jpg" alt="чувак печатает на клавиатуре"
+                        <img 
+                        srcset="./img./img-1.jpg 1x, ./img./img-1@2x.jpg 2x"
+                        src="./img./img-1.jpg" 
+                        alt="чувак печатает на клавиатуре"
                         width="370"
                         height="294">
                         <div class="activity__description">
@@ -213,7 +213,10 @@
                         </div>
                     </li>
                     <li class="activity__item">
-                        <img src="./img./img-2.jpg" alt="девушка смотрит в телефон"
+                        <img 
+                        srcset="./img./img-2.jpg 1x, ./img./img-2@2x.jpg 2x"
+                        src="./img./img-2.jpg" 
+                        alt="девушка смотрит в телефон"
                         width="370"
                         height="294">
                         <div class="activity__description">
@@ -221,7 +224,10 @@
                         </div>
                     </li>
                     <li class="activity__item">
-                        <img src="./img./img-3.jpg" alt="палитра цветов"
+                        <img 
+                        srcset="./img./img-3.jpg 1x, ./img./img-3@2x.jpg 2x"
+                        src="./img./img-3.jpg" 
+                        alt="палитра цветов"
                         width="370"
                         height="294">
                         <div class="activity__description">
@@ -237,7 +243,10 @@
                 <h2 class="team-section__title">Наша команда</h2>
                 <ul class="list team-section__cards">
                     <li class="team-section__cards-item">
-                        <img src="./img./photo-img-1.jpg" alt="фото сотрудника"
+                        <img 
+                            srcset="./img./photo-img-1.jpg 1x, ./img./photo-img-1@2x.jpg 2x"
+                            src="./img./photo-img-1.jpg" 
+                            alt="фото сотрудника"
                             width="270"
                             height="260">
                         <div class="employee">
@@ -300,7 +309,10 @@
                         </div>
                     </li>
                     <li class="team-section__cards-item">
-                        <img src="./img./photo-img-2.jpg" alt="фото сотрудника"
+                        <img 
+                            srcset="./img./photo-img-2.jpg 1x, ./img./photo-img-2@2x.jpg 2x"
+                            src="./img./photo-img-2.jpg" 
+                            alt="фото сотрудника"
                             width="270"
                             height="260">
                         <div class="employee">
@@ -363,7 +375,10 @@
                         </div>
                     </li>
                     <li class="team-section__cards-item">
-                        <img src="./img./photo-img-3.jpg" alt="фото сотрудника"
+                        <img 
+                            srcset="./img./photo-img-3.jpg 1x, ./img./photo-img-3@2x.jpg 2x"
+                            src="./img./photo-img-3.jpg" 
+                            alt="фото сотрудника"
                             width="270"
                             height="260">
                         <div class="employee">
@@ -426,7 +441,10 @@
                         </div>
                     </li>
                     <li class="team-section__cards-item">
-                        <img src="./img./photo-img-4.jpg" alt="фото сотрудника"
+                        <img 
+                            srcset="./img./photo-img-4.jpg 1x, ./img./photo-img-4@2x.jpg 2x"
+                            src="./img./photo-img-4.jpg" 
+                            alt="фото сотрудника"
                             width="270"
                             height="260">
                         <div class="employee">
@@ -770,6 +788,7 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 
 </body>
 </html>

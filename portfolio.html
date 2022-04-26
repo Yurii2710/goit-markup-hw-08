@@ -26,18 +26,6 @@
         <div class="container header-container">
             <nav class="header-nav">
                 <a class="link logo-header" href="./index.html">Web<span class="logo__component-header">Studio</span></a>
-                
-                <!-- MOBILE MODAL-BUTTON -->
-                <button type="button" class="header-burger" data-modal-mobile-open>
-                    <svg
-                        width="40" 
-                        height="40">
-                            <use 
-                                href="./img./icons.svg#icon-burger-mobile">
-                            </use>
-                    </svg>
-                </button>
-
                 <ul class="list header-nav__list">
                     <li class="header-nav__item">
                         <a class="link header-nav__link" href="./index.html">Студия</a>
@@ -50,6 +38,17 @@
                     </li>
                 </ul>
             </nav>
+
+            <!-- MOBILE MODAL-BUTTON -->
+            <button type="button" class="header-burger" data-menu-open>
+                <svg
+                    width="40" 
+                    height="40">
+                        <use 
+                            href="./img./icons.svg#icon-burger-mobile">
+                        </use>
+                </svg>
+            </button>
 
             <ul class="list header-contact">
                 <li class="header-contact__item">
@@ -82,10 +81,11 @@
             </ul>
         </div>
 
-        <!-- MOBILE MODAL -->
-        <div class="backdrop-header is-hidden" data-modal-mobile>
-            <div class="modal-header">
-                <button type="button" class="modal-button-header" data-modal-mobile-close>
+        
+        <!-- MOBILE MENU -->
+        <div class="mobile-menu" data-menu>
+            <div class="container mobile-menu__container">
+                <button type="button" class="mobile-button-header" data-menu-close>
                     <svg 
                     width="19" 
                     height="19">
@@ -94,21 +94,19 @@
                         </use>
                     </svg>
                 </button>
-
-                <nav class="header-nav__modal">
-                    <ul class="list header-nav__list--modal">
-                        <li class="header-nav__item--modal">
-                            <a class="link header-nav__link--modal" href="./index.html">Студия</a>
-                        </li>
-                        <li class="header-nav__item--modal">
-                            <a class="link header-nav__link--modal header-nav__link--portfolio" href="./portfolio.html">Портфолио</a>
-                        </li>
-                        <li class="header-nav__item--modal">
-                            <a class="link header-nav__link--modal " href="">Контакты</a>
-                        </li>
-                    </ul>
-                </nav>
-    
+                
+                <ul class="list header-nav__list--modal">
+                    <li class="header-nav__item--modal">
+                        <a class="link header-nav__link--modal" href="./index.html">Студия</a>
+                    </li>
+                    <li class="header-nav__item--modal">
+                        <a class="link header-nav__link--modal header-nav__link--mobile-portfolio" href="./portfolio.html">Портфолио</a>
+                    </li>
+                    <li class="header-nav__item--modal">
+                        <a class="link header-nav__link--modal" href="">Контакты</a>
+                    </li>
+                </ul>
+                
                 <ul class="list header-contact__modal">
                     <li class="header-contact__item--modal"> 
                         <a class="link header-contact__link-modal header-contact__link-modal--tel" href="tel:+380961111111"> +38 096 111 11 11</a>
@@ -117,7 +115,7 @@
                         <a class="link header-contact__link-modal header-contact__link-modal--mail" href="mailto:info@devstudio.com"> info@devstudio.com</a>
                     </li>
                 </ul>
-
+                
                 <ul class="list header-sosial">
                     <li class="header-sosial__item" lang="en">Instagram</li>
                     <li class="header-sosial__item" lang="en">Twitter</li>
@@ -155,9 +153,39 @@
                     <li class="projects__item">
                         <a href="" class="projects__link link"> 
                             <div class="projects__img">
-                                <img src="./img./portfolio-img/img-1.jpg" alt="изображение сайта"
-                                width="370"
-                                height="294">
+                                <picture>
+                                    <source 
+                                        srcset="/img./portfolio-img/img-1-desk.webp 1x, /img./portfolio-img/img-1-desk@2x.webp 2x"
+                                        media="(min-width: 1200px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-1-desk.jpg 1x, /img./portfolio-img/img-1-desk@2x.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                    />
+
+                                    <source 
+                                        srcset="/img./portfolio-img/img-1-tabl.webp 1x, /img./portfolio-img/img-1-tabl@2x.webp 2x"
+                                        media="(min-width: 768px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-1-tabl.jpg 1x, /img./portfolio-img/img-1-tabl@2x.jpg 2x"
+                                        media="(min-width: 768px)"
+                                    />
+                                    
+                                    <source 
+                                        srcset="/img./portfolio-img/img-1-mob.webp 1x, /img./portfolio-img/img-1-mob@2x.webp 2x"
+                                        media="(max-width: 767px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-1-mob.jpg 1x, /img./portfolio-img/img-1-mob@2x.jpg 2x"
+                                        media="(max-width: 767px)"
+                                    />
+
+                                    <img src="./img./portfolio-img/img-1-mob.jpg" alt="изображение сайта" width="370" height="294">
+                                </picture>
                                 <div class="projects__overlay">
                                     <div class="projects__overlay-card">
                                         <p class="projects__overlay-text">
@@ -175,9 +203,41 @@
                     <li class="projects__item">
                         <a href="" class="projects__link link"> 
                             <div class="projects__img">
-                                <img src="./img./portfolio-img/img-2.jpg" alt="изображение баскетбольной команды"
-                                width="370"
-                                height="294">
+
+                                <picture>
+                                    <source 
+                                        srcset="/img./portfolio-img/img-2-desk.webp 1x, /img./portfolio-img/img-2-desk@2x.webp 2x"
+                                        media="(min-width: 1200px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-2-desk.jpg 1x, /img./portfolio-img/img-2-desk@2x.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                    />
+
+                                    <source 
+                                        srcset="/img./portfolio-img/img-2-tabl.webp 1x, /img./portfolio-img/img-2-tabl@2x.webp 2x"
+                                        media="(min-width: 768px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-2-tabl.jpg 1x, /img./portfolio-img/img-2-tabl@2x.jpg 2x"
+                                        media="(min-width: 768px)"
+                                    />
+                                    
+                                    <source 
+                                        srcset="/img./portfolio-img/img-2-mob.webp 1x, /img./portfolio-img/img-2-mob@2x.webp 2x"
+                                        media="(max-width: 767px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-2-mob.jpg 1x, /img./portfolio-img/img-2-mob@2x.jpg 2x"
+                                        media="(max-width: 767px)"
+                                    />
+
+                                    <img src="./img./portfolio-img/img-2-mob.jpg" alt="изображение баскетбольной команды" width="370" height="294">
+                                </picture>
+                                
                                 <div class="projects__overlay">
                                     <div class="projects__overlay-card">
                                         <p class="projects__overlay-text">
@@ -195,9 +255,41 @@
                     <li class="projects__item">
                         <a href="" class="projects__link link"> 
                             <div class="projects__img">
-                                <img src="./img./portfolio-img/img-3.jpg" alt="изображение эмблемы ресторана'"
-                                width="370"
-                                height="294">
+                                
+                                <picture>
+                                    <source 
+                                        srcset="/img./portfolio-img/img-3-desk.webp 1x, /img./portfolio-img/img-3-desk@2x.webp 2x"
+                                        media="(min-width: 1200px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-3-desk.jpg 1x, /img./portfolio-img/img-3-desk@2x.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                    />
+
+                                    <source 
+                                        srcset="/img./portfolio-img/img-3-tabl.webp 1x, /img./portfolio-img/img-3-tabl@2x.webp 2x"
+                                        media="(min-width: 768px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-3-tabl.jpg 1x, /img./portfolio-img/img-3-tabl@2x.jpg 2x"
+                                        media="(min-width: 768px)"
+                                    />
+                                    
+                                    <source 
+                                        srcset="/img./portfolio-img/img-3-mob.webp 1x, /img./portfolio-img/img-3-mob@2x.webp 2x"
+                                        media="(max-width: 767px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-3-mob.jpg 1x, /img./portfolio-img/img-3-mob@2x.jpg 2x"
+                                        media="(max-width: 767px)"
+                                    />
+
+                                    <img src="./img./portfolio-img/img-3-mob.jpg" alt="изображение эмблемы ресторана" width="370" height="294">
+                                </picture>
+                                
                                 <div class="projects__overlay">
                                     <div class="projects__overlay-card">
                                         <p class="projects__overlay-text">
@@ -215,9 +307,39 @@
                     <li class="projects__item">
                         <a href="" class="projects__link link"> 
                             <div class="projects__img">
-                                <img src="./img./portfolio-img/img-4.jpg" alt="изображение наушников"
-                                width="370"
-                                height="294">
+                                <picture>
+                                    <source 
+                                        srcset="/img./portfolio-img/img-4-desk.webp 1x, /img./portfolio-img/img-4-desk@2x.webp 2x"
+                                        media="(min-width: 1200px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-4-desk.jpg 1x, /img./portfolio-img/img-4-desk@2x.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                    />
+
+                                    <source 
+                                        srcset="/img./portfolio-img/img-4-tabl.webp 1x, /img./portfolio-img/img-4-tabl@2x.webp 2x"
+                                        media="(min-width: 768px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-4-tabl.jpg 1x, /img./portfolio-img/img-4-tabl@2x.jpg 2x"
+                                        media="(min-width: 768px)"
+                                    />
+                                    
+                                    <source 
+                                        srcset="/img./portfolio-img/img-4-mob.webp 1x, /img./portfolio-img/img-4-mob@2x.webp 2x"
+                                        media="(max-width: 767px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-4-mob.jpg 1x, /img./portfolio-img/img-4-mob@2x.jpg 2x"
+                                        media="(max-width: 767px)"
+                                    />
+
+                                    <img src="./img./portfolio-img/img-4-mob.jpg" alt="изображение наушников" width="370" height="294">
+                                </picture>
                                 <div class="projects__overlay">
                                     <div class="projects__overlay-card">
                                         <p class="projects__overlay-text">
@@ -235,9 +357,40 @@
                     <li class="projects__item">
                         <a href="" class="projects__link link"> 
                             <div class="projects__img">
-                                <img src="./img./portfolio-img/img-5.jpg" alt="изображение коробок"
-                                width="370"
-                                height="294">
+                                <picture>
+                                    <source 
+                                        srcset="/img./portfolio-img/img-5-desk.webp 1x, /img./portfolio-img/img-5-desk@2x.webp 2x"
+                                        media="(min-width: 1200px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-5-desk.jpg 1x, /img./portfolio-img/img-5-desk@2x.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                    />
+
+                                    <source 
+                                        srcset="/img./portfolio-img/img-5-tabl.webp 1x, /img./portfolio-img/img-5-tabl@2x.webp 2x"
+                                        media="(min-width: 768px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-5-tabl.jpg 1x, /img./portfolio-img/img-5-tabl@2x.jpg 2x"
+                                        media="(min-width: 768px)"
+                                    />
+                                    
+                                    <source 
+                                        srcset="/img./portfolio-img/img-5-mob.webp 1x, /img./portfolio-img/img-5-mob@2x.webp 2x"
+                                        media="(max-width: 767px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-5-mob.jpg 1x, /img./portfolio-img/img-5-mob@2x.jpg 2x"
+                                        media="(max-width: 767px)"
+                                    />
+
+                                    <img src="./img./portfolio-img/img-5-mob.jpg" alt="изображение коробок" width="370" height="294">
+                                </picture>
+                                
                                 <div class="projects__overlay">
                                     <div class="projects__overlay-card">
                                         <p class="projects__overlay-text">
@@ -255,9 +408,40 @@
                     <li class="projects__item">
                         <a href="" class="projects__link link"> 
                             <div class="projects__img">
-                                <img src="./img./portfolio-img/img-6.jpg" alt="изображение веб-сайта"
-                                width="370"
-                                height="294">
+                                <picture>
+                                    <source 
+                                        srcset="/img./portfolio-img/img-6-desk.webp 1x, /img./portfolio-img/img-6-desk@2x.webp 2x"
+                                        media="(min-width: 1200px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-6-desk.jpg 1x, /img./portfolio-img/img-6-desk@2x.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                    />
+
+                                    <source 
+                                        srcset="/img./portfolio-img/img-6-tabl.webp 1x, /img./portfolio-img/img-6-tabl@2x.webp 2x"
+                                        media="(min-width: 768px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-6-tabl.jpg 1x, /img./portfolio-img/img-6-tabl@2x.jpg 2x"
+                                        media="(min-width: 768px)"
+                                    />
+                                    
+                                    <source 
+                                        srcset="/img./portfolio-img/img-6-mob.webp 1x, /img./portfolio-img/img-6-mob@2x.webp 2x"
+                                        media="(max-width: 767px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-6-mob.jpg 1x, /img./portfolio-img/img-6-mob@2x.jpg 2x"
+                                        media="(max-width: 767px)"
+                                    />
+
+                                    <img src="./img./portfolio-img/img-6-mob.jpg" alt="изображение веб-сайта" width="370" height="294">
+                                </picture>
+
                                 <div class="projects__overlay">
                                     <div class="projects__overlay-card">
                                         <p class="projects__overlay-text">
@@ -275,9 +459,40 @@
                     <li class="projects__item">
                         <a href="" class="projects__link link"> 
                             <div class="projects__img">
-                                <img src="./img./portfolio-img/img-7.jpg" alt="изображение журнала"
-                                width="370"
-                                height="294">
+                                <picture>
+                                    <source 
+                                        srcset="/img./portfolio-img/img-7-desk.webp 1x, /img./portfolio-img/img-7-desk@2x.webp 2x"
+                                        media="(min-width: 1200px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-7-desk.jpg 1x, /img./portfolio-img/img-7-desk@2x.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                    />
+
+                                    <source 
+                                        srcset="/img./portfolio-img/img-7-tabl.webp 1x, /img./portfolio-img/img-7-tabl@2x.webp 2x"
+                                        media="(min-width: 768px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-7-tabl.jpg 1x, /img./portfolio-img/img-7-tabl@2x.jpg 2x"
+                                        media="(min-width: 768px)"
+                                    />
+                                    
+                                    <source 
+                                        srcset="/img./portfolio-img/img-7-mob.webp 1x, /img./portfolio-img/img-7-mob@2x.webp 2x"
+                                        media="(max-width: 767px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-7-mob.jpg 1x, /img./portfolio-img/img-7-mob@2x.jpg 2x"
+                                        media="(max-width: 767px)"
+                                    />
+
+                                    <img src="./img./portfolio-img/img-7-mob.jpg" alt="изображение журнала" width="370" height="294">
+                                </picture>
+
                                 <div class="projects__overlay">
                                     <div class="projects__overlay-card">
                                         <p class="projects__overlay-text">
@@ -295,9 +510,40 @@
                     <li class="projects__item">
                         <a href="" class="projects__link link"> 
                             <div class="projects__img">
-                                <img src="./img./portfolio-img/img-8.jpg" alt="изображение эмблемы"
-                                width="370"
-                                height="294">
+                                <picture>
+                                    <source 
+                                        srcset="/img./portfolio-img/img-8-desk.webp 1x, /img./portfolio-img/img-8-desk@2x.webp 2x"
+                                        media="(min-width: 1200px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-8-desk.jpg 1x, /img./portfolio-img/img-8-desk@2x.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                    />
+
+                                    <source 
+                                        srcset="/img./portfolio-img/img-8-tabl.webp 1x, /img./portfolio-img/img-8-tabl@2x.webp 2x"
+                                        media="(min-width: 768px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-8-tabl.jpg 1x, /img./portfolio-img/img-8-tabl@2x.jpg 2x"
+                                        media="(min-width: 768px)"
+                                    />
+                                    
+                                    <source 
+                                        srcset="/img./portfolio-img/img-8-mob.webp 1x, /img./portfolio-img/img-8-mob@2x.webp 2x"
+                                        media="(max-width: 767px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-8-mob.jpg 1x, /img./portfolio-img/img-8-mob@2x.jpg 2x"
+                                        media="(max-width: 767px)"
+                                    />
+
+                                    <img src="./img./portfolio-img/img-8-mob.jpg" alt="изображение лого компании" width="370" height="294">
+                                </picture>
+                                
                                 <div class="projects__overlay">
                                     <div class="projects__overlay-card">
                                         <p class="projects__overlay-text">
@@ -315,9 +561,40 @@
                     <li class="projects__item">
                         <a href="" class="projects__link link"> 
                             <div class="projects__img">
-                                <img src="./img./portfolio-img/img-9.jpg" alt="изображение веб-сайта"
-                                width="370"
-                                height="294">
+                                <picture>
+                                    <source 
+                                        srcset="/img./portfolio-img/img-9-desk.webp 1x, /img./portfolio-img/img-9-desk@2x.webp 2x"
+                                        media="(min-width: 1200px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-9-desk.jpg 1x, /img./portfolio-img/img-9-desk@2x.jpg 2x"
+                                        media="(min-width: 1200px)"
+                                    />
+
+                                    <source 
+                                        srcset="/img./portfolio-img/img-9-tabl.webp 1x, /img./portfolio-img/img-9-tabl@2x.webp 2x"
+                                        media="(min-width: 768px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-9-tabl.jpg 1x, /img./portfolio-img/img-9-tabl@2x.jpg 2x"
+                                        media="(min-width: 768px)"
+                                    />
+                                    
+                                    <source 
+                                        srcset="/img./portfolio-img/img-9-mob.webp 1x, /img./portfolio-img/img-9-mob@2x.webp 2x"
+                                        media="(max-width: 767px)"
+                                        type="image/webp"
+                                    />
+                                    <source 
+                                        srcset="/img./portfolio-img/img-9-mob.jpg 1x, /img./portfolio-img/img-9-mob@2x.jpg 2x"
+                                        media="(max-width: 767px)"
+                                    />
+
+                                    <img src="./img./portfolio-img/img-9-mob.jpg" alt="изображение веб-сайта" width="370" height="294">
+                                </picture>
+                                
                                 <div class="projects__overlay">
                                     <div class="projects__overlay-card">
                                         <p class="projects__overlay-text">
@@ -438,5 +715,7 @@
             
         </div>
     </footer>
+
+    <script src="./js/menu.js"></script>
 </body>
 </html>
