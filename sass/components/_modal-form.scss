@@ -32,6 +32,11 @@
 
   transform: translate(-50%, -50%) scale(1);
 
+  @media screen and (max-width: 479px) {
+    max-width: 370px;
+    max-height: 600px;
+  }
+
   @media screen and (min-width: 1200px) {
     min-width: 528px;
     min-height: 581px;
@@ -108,6 +113,10 @@
       border: 1px solid #2196f3;
   }
 
+  @media screen and (max-width: 479px) {
+    width: 290px;
+  }
+
   @media screen and (min-width: 1200px) {
     width: 448px;
   }
@@ -146,6 +155,10 @@
 
     &:hover, &:focus {
       border: 1px solid #2196f3;
+    }
+
+    @media screen and (max-width: 479px) {
+      width: 290px;
     }
 
     @media screen and (min-width: 1200px) {

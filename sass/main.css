@@ -554,6 +554,13 @@ img {
   transform: translate(-50%, -50%) scale(1);
 }
 
+@media screen and (max-width: 479px) {
+  .modal {
+    max-width: 370px;
+    max-height: 600px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .modal {
     min-width: 528px;
@@ -626,6 +633,12 @@ img {
   border: 1px solid #2196f3;
 }
 
+@media screen and (max-width: 479px) {
+  .modal-form__input {
+    width: 290px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .modal-form__input {
     width: 448px;
@@ -664,6 +677,12 @@ img {
 
 .modal-form__comment-text:hover, .modal-form__comment-text:focus {
   border: 1px solid #2196f3;
+}
+
+@media screen and (max-width: 479px) {
+  .modal-form__comment-text {
+    width: 290px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -981,7 +1000,7 @@ img {
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: #fff;
-  width: 270px;
+  width: auto;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
@@ -1524,8 +1543,6 @@ img {
 
 .projects__img {
   position: relative;
-  width: 370px;
-  height: 294px;
 }
 
 .projects__overlay {
@@ -1582,6 +1599,12 @@ img {
   background: #ffffff;
   border: 1px solid #eeeeee;
   box-sizing: border-box;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .projects__description--first {
+    height: 146px;
+  }
 }
 
 .projects__name {
