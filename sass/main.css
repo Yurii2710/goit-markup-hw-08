@@ -1167,6 +1167,7 @@ img {
 @media screen and (min-width: 1200px) {
   .footer-container {
     display: flex;
+    align-items: baseline;
   }
 }
 
@@ -1175,11 +1176,6 @@ img {
   .footer__contact-social {
     display: flex;
     justify-content: space-around;
-  }
-}
-
-@media screen and (max-width: 1199px) {
-  .footer__contact-social {
     align-items: baseline;
   }
 }
