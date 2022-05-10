@@ -1,14 +1,11 @@
-
 .projects {
     display: flex;
     flex-wrap: wrap;
-    
-    @media screen and (max-width: 767px) {
-        justify-content: center;
-    }
 
-    @media screen and (max-width: 1199px) {
-        margin: -15px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        justify-content: center;
+        margin-left: -30px;
+        margin-top: -30px;
     }
 
     @media screen and (min-width: 1200px) {
@@ -19,8 +16,9 @@
 
 .projects__item {
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-        width: calc((100% - 2 * 30px) / 2);
-        margin: 15px;
+        flex-basis: calc(100% / 2 - 30px);
+        margin-left: 30px;
+        margin-top: 30px;
     }
 }
 
@@ -28,6 +26,7 @@
 .projects__link {
     display: inline-block;
     position: relative;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     @media screen and (max-width: 767px) {
         margin-bottom: 30px;
@@ -46,6 +45,37 @@
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+}
+
+.projects__description {
+    flex-grow: 1;
+    position: relative;
+    padding: 20px 24px;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    box-sizing: border-box;
+}
+
+.projects__name {
+    margin-bottom: 4px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: $title-color;
+}
+
+.projects__category {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.03em;
+    color: $text-color;
 }
 
 .projects__link:hover .projects__overlay-card,
@@ -84,6 +114,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    overflow: scroll;
 
     width: 322px;
     height: 168px;
@@ -106,44 +137,4 @@
     line-height: 28px;
     letter-spacing: 0.03em;
     color: $white-color;
-}
-
-.projects__description {
-    position: relative;
-    padding-top: 20px;
-    padding-right: 24px;
-    padding-bottom: 20px;
-    padding-left: 24px;
-
-    background: $white-color;
-    border: 1px solid #eeeeee;
-    box-sizing: border-box;
-}
-
-.projects__description--first {
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-        height: 146px;
-    }
-}
-
-.projects__name {
-    margin-bottom: 4px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-    color: $title-color;
-}
-
-.projects__category {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 30px;
-    letter-spacing: 0.03em;
-    color: $text-color;
 }
