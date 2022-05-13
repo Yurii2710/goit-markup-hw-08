@@ -231,3 +231,27 @@
     color: $white-color;
     margin-right: 10px;
 }
+
+
+.problems__tittle {
+    font-weight: 800;
+    font-size: 46px;
+    line-height: 130%;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+}
+
+.problems-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    counter-reset: number 0;
+}
+
+.problems-list--item {
+    counter-increment: number;
+
+    &::before {
+        content: counter(number);
+    }
+}
